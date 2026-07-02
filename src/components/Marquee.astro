@@ -1,0 +1,36 @@
+---
+const items = [
+  "Dispatch",
+  "Timesheets",
+  "Certifications",
+  "CRM",
+  "Reports",
+  "Documents",
+  "Equipment",
+  "Announcements",
+];
+---
+<section class="border-b border-hairline bg-ink text-paper overflow-hidden">
+  <div class="flex whitespace-nowrap py-6 animate-scroll">
+    {[...items, ...items, ...items].map((item) => (
+      <span class="display text-4xl md:text-6xl px-8 flex items-center gap-8">
+        {item}
+        <span class="text-yellow" aria-hidden>◆</span>
+      </span>
+    ))}
+  </div>
+</section>
+
+<style>
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-33.333%); }
+  }
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+    width: max-content;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-scroll { animation: none; }
+  }
+</style>

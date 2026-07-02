@@ -1,0 +1,68 @@
+---
+const modules = [
+  {
+    n: "01",
+    title: "Dispatch",
+    body: "Assign jobs, route techs, and track completion in real time. Drag-and-drop the calendar. Push updates to the crew.",
+    detail: "Calendar · Route optimization · Live status",
+  },
+  {
+    n: "02",
+    title: "Timesheets",
+    body: "Field techs clock in from the app. Sign-off with the client on-site. Payroll exports every Friday, hands-free.",
+    detail: "Mobile clock-in · Client sign-off · Payroll export",
+  },
+  {
+    n: "03",
+    title: "Certifications",
+    body: "Every tech, every cert, every expiration date — tracked. Automatic alerts before anything lapses. Audit-ready.",
+    detail: "Expiration tracking · Auto alerts · ISO-aligned",
+  },
+  {
+    n: "04",
+    title: "CRM",
+    body: "Accounts, contacts, opportunities, and pipeline in the same place the work gets done. Won opportunities become projects automatically.",
+    detail: "Pipeline · Accounts · Auto-project creation",
+  },
+  {
+    n: "05",
+    title: "Reports",
+    body: "Field reports, monthly rollups, executive dashboards. Filtered by client, project, or crew. Export as PDF with your brand.",
+    detail: "Field reports · Client reports · Executive rollups",
+  },
+];
+---
+<section id="platform" class="border-b border-hairline">
+  <div class="container-wide py-24 md:py-32">
+    <div class="grid grid-cols-12 gap-6 mb-16">
+      <div class="col-span-12 md:col-span-4">
+        <p class="eyebrow">§ 02 — The platform</p>
+      </div>
+      <div class="col-span-12 md:col-span-8">
+        <h2 class="display text-4xl md:text-6xl">
+          Five modules.<br />One database.<br />
+          <span class="text-steel">No integrations required.</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="rule-thick" />
+
+    {modules.map((m, i) => (
+      <div class="grid grid-cols-12 gap-6 py-10 border-b border-hairline">
+        <div class="col-span-12 md:col-span-2">
+          <p class="eyebrow">{m.n}</p>
+        </div>
+        <div class="col-span-12 md:col-span-4">
+          <h3 class="display text-4xl md:text-5xl">{m.title}</h3>
+        </div>
+        <div class="col-span-12 md:col-span-4 text-base leading-relaxed">
+          {m.body}
+        </div>
+        <div class="col-span-12 md:col-span-2 text-xs font-mono text-steel">
+          {m.detail}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,40 @@
+---
+const audiences = [
+  { tag: "NDT", label: "Non-destructive testing", note: "Cert-heavy, audit-driven, project-based." },
+  { tag: "HVAC", label: "HVAC & mechanical", note: "Dispatch, sign-off, recurring maintenance." },
+  { tag: "ELEC", label: "Electrical contractors", note: "Crew tracking, job costing, invoicing." },
+  { tag: "ROOF", label: "Roofing & exteriors", note: "Estimates, project handoff, photo reports." },
+  { tag: "IND", label: "Industrial services", note: "Client sign-off, multi-site, SLA reporting." },
+];
+---
+<section id="for" class="border-b border-hairline bg-ink text-paper">
+  <div class="container-wide py-24 md:py-32">
+    <div class="grid grid-cols-12 gap-6 mb-12">
+      <div class="col-span-12 md:col-span-4">
+        <p class="eyebrow text-hairline">§ 03 — Who it's for</p>
+      </div>
+      <div class="col-span-12 md:col-span-8">
+        <h2 class="display text-4xl md:text-6xl">
+          Built for teams that<br />
+          <span class="text-yellow">live on the road.</span>
+        </h2>
+      </div>
+    </div>
+    <div class="rule-thick border-paper" />
+    {audiences.map((a) => (
+      <div class="grid grid-cols-12 gap-6 py-8 border-b border-steel/40 items-center">
+        <div class="col-span-3 md:col-span-2">
+          <span class="inline-block border border-yellow text-yellow font-mono text-xs px-2 py-1">
+            {a.tag}
+          </span>
+        </div>
+        <div class="col-span-9 md:col-span-6 display text-2xl md:text-3xl">
+          {a.label}
+        </div>
+        <div class="col-span-12 md:col-span-4 text-sm text-hairline">
+          {a.note}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,32 @@
+---
+const steps = [
+  { n: "01", title: "Book a demo", body: "30 minutes with the founder. We show you the platform running with realistic data. No slide decks." },
+  { n: "02", title: "Provision your tenant", body: "We spin up your instance, brand it with your company name and logo, and load your first 10 users. Same day." },
+  { n: "03", title: "Migrate & train", body: "We help you import accounts, certifications, and open jobs. Field crew training in a single 45-minute session." },
+  { n: "04", title: "Go live", body: "Your team runs the field on FieldOps. We stay close for the first 30 days. After that, monthly check-ins." },
+];
+---
+<section id="how" class="border-b border-hairline">
+  <div class="container-wide py-24 md:py-32">
+    <div class="grid grid-cols-12 gap-6 mb-16">
+      <div class="col-span-12 md:col-span-4">
+        <p class="eyebrow">§ 04 — How it works</p>
+      </div>
+      <div class="col-span-12 md:col-span-8">
+        <h2 class="display text-4xl md:text-6xl">
+          From demo to live in<br />
+          <span class="text-steel">under two weeks.</span>
+        </h2>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-0 border-t-2 border-ink">
+      {steps.map((s, i) => (
+        <div class={`p-6 md:p-8 border-b border-hairline md:border-b-0 ${i < 3 ? 'md:border-r border-hairline' : ''}`}>
+          <p class="eyebrow mb-6">{s.n}</p>
+          <h3 class="display text-2xl md:text-3xl mb-4">{s.title}</h3>
+          <p class="text-sm leading-relaxed text-steel">{s.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
